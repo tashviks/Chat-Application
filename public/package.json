@@ -1,4 +1,5 @@
 {
+  "homepage": "https://tashviks.github.io/Chat-Application"
   "name": "chat-app",
   "version": "0.1.0",
   "private": true,
@@ -25,6 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
