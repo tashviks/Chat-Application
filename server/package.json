@@ -1,5 +1,4 @@
 {
-  "homepage": "https://tashviks.github.io/Chat-Application"
   "name": "chat-app-backend",
   "version": "1.0.0",
   "description": "",
@@ -7,8 +6,6 @@
   "scripts": {
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
