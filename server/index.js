@@ -6,7 +6,6 @@ const messageRoutes = require("./routes/messages");
 const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
-
 app.use(cors());
 app.use(express.json());
 
@@ -34,6 +33,7 @@ const io = socket(server, {
     credentials: true,
   },
 });
+// Created a socket with origin at localhost 3000
 
 global.onlineUsers = new Map();
 io.on("connection", (socket) => {
