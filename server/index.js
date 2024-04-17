@@ -29,7 +29,7 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: "https://snuggle-sigma.vercel.app/login",
+    origin: "https://localhost:3000",
     credentials: true,
   },
 });
