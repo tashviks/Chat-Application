@@ -2,6 +2,7 @@ const Messages = require("../models/messageModel");
 
 module.exports.getMessages = async (req, res, next) => {
   try {
+    console.log(req.body);
     const { from, to } = req.body;
 
     const messages = await Messages.find({
@@ -16,7 +17,9 @@ module.exports.getMessages = async (req, res, next) => {
         message: msg.message.text,
       };
     });
+    console.log(projectedMessages);
     res.json(projectedMessages);
+    
   } catch (ex) {
     next(ex);
   }

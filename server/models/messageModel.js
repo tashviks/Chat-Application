@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const MessageSchema = mongoose.Schema(
   {
     message: {
@@ -16,5 +15,4 @@ const MessageSchema = mongoose.Schema(
     timestamps: true,
   }
 );
-
 module.exports = mongoose.model("Messages", MessageSchema);

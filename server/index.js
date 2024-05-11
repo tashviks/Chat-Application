@@ -8,7 +8,6 @@ const socket = require("socket.io");
 require("dotenv").config();
 app.use(cors());
 app.use(express.json());
-
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
@@ -29,12 +28,10 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: "https://localhost:3000",
+    origin: "http://localhost:3000",
     credentials: true,
   },
 });
-// Created a socket with origin at localhost 3000
-
 global.onlineUsers = new Map();
 io.on("connection", (socket) => {
   global.chatSocket = socket;
